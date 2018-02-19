@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="col-xs-6">
+    <div class="range range-danger">
+      <input type="range" name="range" min="1" max="4" [value]="4" (change)="valueChange($event)">
+      <output id="rangeDanger">{{outputVal}}</output>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default col-xs-12 col-sm-11" *ngFor="let userVal of users | filter: query">
+  <h3 >{{userVal.ID}} {{userVal.User}}</h3>
+</div>
